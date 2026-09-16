@@ -229,7 +229,7 @@ function App() {
       <footer className="site-footer">
         <div className="shell footer-inner">
           <p>© {new Date().getFullYear()} Ralph Cristofer Fugaban</p>
-          <p>Software development · Automation · Quality engineering</p>
+          <p>Software Development · Automation · Quality Engineering</p>
           <a href="#home">Back to top ↑</a>
         </div>
       </footer>

@@ -4,11 +4,6 @@ import { TagList } from './TagList'
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
-      <div className="project-preview" role="img" aria-label={`Reserved preview area for ${project.name}`}>
-        <span>{project.eyebrow}</span>
-        <strong>{project.name}</strong>
-        <small>Project screenshot can be added here</small>
-      </div>
       <div className="project-body">
         <div className="project-heading">
           <div>

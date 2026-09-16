@@ -9,6 +9,7 @@ export type Role = {
   employmentType?: string
   dates: string
   location?: string
+  workMode?: 'On-site' | 'Remote' | 'Hybrid'
   summary: string
   highlights: string[]
   technologies?: string[]

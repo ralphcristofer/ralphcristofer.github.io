@@ -33,7 +33,6 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Cloudflare Workers', 'Durable Objects', 'SQLite', 'Vitest'],
     status: 'Deployed',
     repository: 'https://github.com/ralphcristofer/skap',
-    demo: 'https://skap.montreal-ecc.workers.dev/',
     featured: true,
   },
   {

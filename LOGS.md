@@ -124,3 +124,20 @@
 - Corrected a narrow-screen horizontal-scroll edge case and repeated the production build after the fix.
 - Added private Sites hosting metadata for a shareable review deployment while retaining GitHub Pages as the documented repository deployment path.
 - Added a minimal static-asset Worker entry used only by the private Sites review deployment; the portfolio remains a static application with no backend data or secrets.
+
+## 2026-09-16 - Consistency and KISS refinement
+
+### Changed
+
+- Audited every career entry for employment type, location, and work arrangement consistency.
+- Separated work arrangement (`On-site`, `Remote`, or `Hybrid`) from geographic location in the structured experience data.
+- Corrected the FDM Software Engineering Consultant entry to `Contract full-time` and retained `Remote` as its separate work arrangement.
+- Identified the Smart Communications role consistently as an `Internship` and `On-site`.
+- Kept employment type or work arrangement absent when the supplied career history did not verify it rather than inventing missing information.
+- Removed the incomplete `Contract` label from the Computer Support and Network Teacher role because the supplied profile does not confirm full-time/part-time status or work arrangement.
+- Removed the SKAP live-demo link.
+- Removed the decorative project-card preview column and simplified featured projects into direct content cards with a clean three-column desktop layout.
+- Reduced the primary heading scale and consolidated several body and card text sizes for a simpler visual hierarchy.
+- Moved the `Current focus` note fully below the portrait so it no longer overlaps or clips the photograph.
+- Changed the footer to a non-overlaying sticky-footer layout that remains at the bottom of short pages without covering content.
+- Updated footer capitalization to `Software Development · Automation · Quality Engineering`.

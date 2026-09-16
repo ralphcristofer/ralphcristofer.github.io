@@ -21,7 +21,9 @@ export function ExperienceGroupCard({ experience, compact = false }: ExperienceG
               <div className="role-heading">
                 <div>
                   <h4>{role.title}</h4>
-                  {role.employmentType ? <p className="employment-type">{role.employmentType}</p> : null}
+                  {role.employmentType || role.workMode ? (
+                    <p className="employment-type">{[role.employmentType, role.workMode].filter(Boolean).join(' · ')}</p>
+                  ) : null}
                 </div>
                 <div className="role-meta">
                   <span>{role.dates}</span>

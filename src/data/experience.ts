@@ -9,7 +9,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Senior Business Solutions Consultant (Senior Software Developer)',
         employmentType: 'Permanent full-time',
         dates: 'May 2026 – Present',
-        location: 'Toronto, Ontario · Hybrid',
+        location: 'Toronto, Ontario',
+        workMode: 'Hybrid',
         summary:
           'Developing and supporting internal Fund Accounting software solutions by translating business requirements into reliable applications and practical modernization work.',
         highlights: [
@@ -34,7 +35,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Software Automation Developer',
         employmentType: 'Contract full-time via FDM Group',
         dates: 'Jun 2025 – May 2026',
-        location: 'Toronto, Ontario · Hybrid',
+        location: 'Toronto, Ontario',
+        workMode: 'Hybrid',
         summary:
           'Built and evolved a Playwright and TypeScript automation platform for a wealth-management application, including major components reconstructed after application redesigns.',
         highlights: [
@@ -55,7 +57,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Quality Assurance Analyst',
         employmentType: 'Contract full-time via FDM Group',
         dates: 'Apr 2025 – May 2026',
-        location: 'Toronto, Ontario · Hybrid',
+        location: 'Toronto, Ontario',
+        workMode: 'Hybrid',
         summary:
           'Owned detailed functional and release validation across the software lifecycle, connecting requirements, test evidence, risk, and business sign-off.',
         highlights: [
@@ -80,7 +83,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Software Quality Assurance Lead',
         employmentType: 'Contract full-time',
         dates: 'Dec 2024 – Apr 2025',
-        location: 'Toronto, Ontario · Remote',
+        location: 'Toronto, Ontario',
+        workMode: 'Remote',
         summary:
           'Built maintainable UI, API, database, and end-to-end automation frameworks for banking and insurance training applications.',
         highlights: [
@@ -94,9 +98,10 @@ export const primaryExperience: ExperienceGroup[] = [
       },
       {
         title: 'Software Engineering Consultant',
-        employmentType: 'Training and consulting program',
+        employmentType: 'Contract full-time',
         dates: 'Oct 2024 – Apr 2025',
-        location: 'Toronto, Ontario · Remote',
+        location: 'Toronto, Ontario',
+        workMode: 'Remote',
         summary:
           'Developed Java and MySQL financial application projects using object-oriented programming and enterprise-oriented engineering practices.',
         highlights: [
@@ -112,7 +117,6 @@ export const primaryExperience: ExperienceGroup[] = [
     roles: [
       {
         title: 'Computer Support and Network Teacher',
-        employmentType: 'Contract',
         dates: 'Nov 2020 – Sep 2023',
         location: 'Montreal, Quebec',
         summary:
@@ -147,7 +151,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'IT Manager',
         employmentType: 'Permanent full-time',
         dates: 'Nov 2018 – Jul 2021',
-        location: 'Westmount, Quebec · Hybrid',
+        location: 'Westmount, Quebec',
+        workMode: 'Hybrid',
         summary:
           'Managed day-to-day technology operations, infrastructure, support, websites, equipment, documentation, volunteers, interns, and vendor coordination.',
         highlights: [
@@ -161,7 +166,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Systems Administration and Technical Support',
         employmentType: 'Permanent full-time',
         dates: 'Nov 2018 – Jul 2021',
-        location: 'Westmount, Quebec · Hybrid',
+        location: 'Westmount, Quebec',
+        workMode: 'Hybrid',
         summary:
           'Administered servers, accounts, networks, endpoints, shared resources, backups, updates, and access controls.',
         highlights: [
@@ -174,7 +180,8 @@ export const primaryExperience: ExperienceGroup[] = [
         title: 'Web Application Developer',
         employmentType: 'Permanent full-time',
         dates: 'Nov 2018 – Jul 2021',
-        location: 'Westmount, Quebec · Hybrid',
+        location: 'Westmount, Quebec',
+        workMode: 'Hybrid',
         summary:
           'Improved internal and public-facing web systems that supported computer-centre rentals, equipment usage, requests, and communications.',
         highlights: [
@@ -263,7 +270,8 @@ export const earlierExperience: ExperienceGroup[] = [
         title: 'Team Member / Baker',
         employmentType: 'Permanent full-time',
         dates: 'Mar 2013 – Aug 2014',
-        location: 'Montreal, Quebec · On-site',
+        location: 'Montreal, Quebec',
+        workMode: 'On-site',
         summary: 'Early customer-service and operations experience in a high-volume team environment.',
         highlights: [],
       },
@@ -274,8 +282,10 @@ export const earlierExperience: ExperienceGroup[] = [
     roles: [
       {
         title: 'Full Stack Developer Intern',
+        employmentType: 'Internship',
         dates: 'Jun 2011 – Jun 2012',
-        location: 'Philippines · On-site',
+        location: 'Philippines',
+        workMode: 'On-site',
         summary: 'An early software-development foundation building and maintaining an internal business web application.',
         highlights: [
           'Developed front-end pages, interface components, and application functionality with ASP.NET, C#, HTML, CSS, and JavaScript.',

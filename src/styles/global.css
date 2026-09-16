@@ -40,6 +40,16 @@ body {
   line-height: 1.65;
 }
 
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 body,
 button,
 a {
@@ -85,17 +95,17 @@ h4 {
 
 h1 {
   margin-bottom: 1rem;
-  font-size: clamp(2.65rem, 11vw, 4.85rem);
+  font-size: clamp(2.4rem, 9vw, 4rem);
   max-width: 12ch;
 }
 
 h2 {
   margin-bottom: 1rem;
-  font-size: clamp(2rem, 7vw, 3.25rem);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
 }
 
 p {
@@ -279,7 +289,7 @@ p {
   max-width: 45rem;
   margin-bottom: 1.1rem;
   color: var(--blue-dark);
-  font-size: clamp(1.05rem, 4vw, 1.35rem);
+  font-size: clamp(1.05rem, 3vw, 1.25rem);
   font-weight: 750;
   line-height: 1.45;
 }
@@ -287,7 +297,7 @@ p {
 .hero-introduction {
   max-width: 42rem;
   margin-bottom: 1.7rem;
-  font-size: 1.03rem;
+  font-size: 1rem;
 }
 
 .hero-actions {
@@ -386,13 +396,12 @@ p {
 
 .portrait-note {
   position: relative;
-  width: calc(100% - 1.5rem);
-  margin: -1.5rem auto 0;
+  width: 100%;
+  margin: 0.75rem 0 0;
   padding: 0.9rem 1rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--white);
-  box-shadow: 0 10px 30px rgba(22, 48, 82, 0.12);
 }
 
 .portrait-note span {
@@ -425,7 +434,7 @@ p {
 .outcomes-heading h2 {
   margin-bottom: 0;
   color: var(--white);
-  font-size: clamp(1.55rem, 5vw, 2.2rem);
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
 }
 
 .metric-grid {
@@ -450,7 +459,7 @@ p {
 .metric strong {
   margin-bottom: 0.45rem;
   color: var(--white);
-  font-size: clamp(1.15rem, 4vw, 1.55rem);
+  font-size: 1.375rem;
   letter-spacing: -0.03em;
 }
 
@@ -476,7 +485,7 @@ p {
 .section-heading > p:last-child {
   max-width: 46rem;
   margin-bottom: 0;
-  font-size: 1.02rem;
+  font-size: 1rem;
 }
 
 .about-grid {
@@ -572,7 +581,7 @@ p {
 
 .role-heading h4 {
   margin-bottom: 0.3rem;
-  font-size: 1.08rem;
+  font-size: 1.125rem;
 }
 
 .employment-type {
@@ -589,7 +598,7 @@ p {
 }
 
 .role-summary {
-  font-size: 0.93rem;
+  font-size: 0.875rem;
 }
 
 .highlight-list,
@@ -597,7 +606,7 @@ p {
   margin: 0;
   padding-left: 1.1rem;
   color: var(--ink-soft);
-  font-size: 0.86rem;
+  font-size: 0.875rem;
 }
 
 .highlight-list li,
@@ -719,46 +728,6 @@ p {
   background: var(--white);
 }
 
-.project-preview {
-  display: flex;
-  min-height: 13rem;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 1.25rem;
-  background: var(--surface-blue);
-  border-bottom: 1px solid #cfddf0;
-}
-
-.project-preview::before {
-  content: "";
-  align-self: flex-end;
-  width: 4.5rem;
-  height: 4.5rem;
-  margin-bottom: auto;
-  border: 1px solid #bad0ef;
-  border-radius: 50%;
-  background: var(--white);
-}
-
-.project-preview span {
-  color: var(--blue-dark);
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.project-preview strong {
-  margin-top: 0.3rem;
-  font-size: 1.55rem;
-}
-
-.project-preview small {
-  margin-top: 0.2rem;
-  color: var(--muted);
-  font-size: 0.68rem;
-}
-
 .project-body {
   padding: 1.25rem;
 }
@@ -786,7 +755,7 @@ p {
 
 .project-copy p,
 .project-decisions {
-  font-size: 0.87rem;
+  font-size: 0.875rem;
 }
 
 .project-copy strong {
@@ -910,7 +879,7 @@ p {
 }
 
 .education-card p {
-  font-size: 0.83rem;
+  font-size: 0.875rem;
 }
 
 .education-date {
@@ -975,7 +944,7 @@ p {
 .contact-card strong {
   overflow-wrap: anywhere;
   color: var(--ink);
-  font-size: 0.84rem;
+  font-size: 0.875rem;
 }
 
 .resume-notice {
@@ -994,7 +963,7 @@ p {
 
 .resume-notice p:last-child {
   margin-bottom: 0;
-  font-size: 0.84rem;
+  font-size: 0.875rem;
 }
 
 .resume-status {
@@ -1009,6 +978,7 @@ p {
 }
 
 .site-footer {
+  margin-top: auto;
   padding-block: 2rem;
   background: var(--ink);
 }
@@ -1120,17 +1090,6 @@ p {
     min-height: 8rem;
   }
 
-  .project-card {
-    display: grid;
-    grid-template-columns: minmax(15rem, 0.82fr) minmax(0, 1.18fr);
-  }
-
-  .project-preview {
-    min-height: 100%;
-    border-right: 1px solid #cfddf0;
-    border-bottom: 0;
-  }
-
   .project-body {
     padding: 1.7rem;
   }
@@ -1181,6 +1140,11 @@ p {
 
   .additional-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
   }
 }
 
