@@ -1,67 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/mediaqueries.css">
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Ralph Cristofer Fugaban</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="hamburger-logo">Ralph Cristofer Fugaban</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="mobile-links">
-                <ul>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="pic-container">
-            <img src="assets/profile-picture.png" alt="Ralph Cristofer Fugaban profile picture">
-        </div>
-        <div class="text">
-            <p class="greetings">Hi there! I'm</p>
-            <h1 class="name">Ralph Cristofer</h1>
-            <p class="title">Software Developer | Web Developer</p>
-    
-            <div class="btn-container">
-                <button class="btn btn-color-1" onclick="window.open('./assets/Fugaban_Ralph_Resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-2" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="social-container">
-                <img src="./assets/linkedin.svg" alt="My LinkedIn Profile"
-                class="icon" onclick="location.href='https://www.linkedin.com/in/ralphfugaban/'">
-                <img src="./assets/github.svg" alt="My GitHub Profile"
-                class="icon" onclick="location.href='https://github.com/ralphcristofer'">
-            </div>
-        </div>
-    </section>
-    <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="The engineering portfolio of Ralph Cristofer Fugaban, a software developer specializing in automation, quality engineering, and application modernization."
+    />
+    <meta name="author" content="Ralph Cristofer Fugaban" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ralphcristofer.github.io/" />
+    <meta property="og:title" content="Ralph Cristofer Fugaban | Software Developer" />
+    <meta
+      property="og:description"
+      content="Software development, automation and quality engineering, and application modernization."
+    />
+    <meta property="og:image" content="https://ralphcristofer.github.io/og.png" />
+    <meta property="og:image:alt" content="Ralph Cristofer Fugaban — Software Developer, Automation and Quality Engineering, Application Modernization" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ralph Cristofer Fugaban | Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Software development, automation and quality engineering, and application modernization."
+    />
+    <meta name="twitter:image" content="https://ralphcristofer.github.io/og.png" />
+    <link rel="canonical" href="https://ralphcristofer.github.io/" />
+    <link rel="icon" type="image/jpeg" href="/profile/ralph-fugaban.jpg" />
+    <title>Ralph Cristofer Fugaban | Software Developer</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ralph Cristofer Fugaban",
+        "url": "https://ralphcristofer.github.io/",
+        "image": "https://ralphcristofer.github.io/profile/ralph-fugaban.jpg",
+        "jobTitle": "Senior Software Developer",
+        "sameAs": [
+          "https://github.com/ralphcristofer",
+          "https://www.linkedin.com/in/ralphfugaban/"
+        ],
+        "knowsAbout": [
+          "Software Development",
+          "Test Automation",
+          "Quality Engineering",
+          "Application Modernization",
+          "TypeScript",
+          "Playwright"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
