@@ -73,6 +73,7 @@ public/
   icons/              Social icons
   profile/            Production profile photograph
   resume/             Final resume PDF location
+  server/             Static-site Worker entry for private review hosting
   og.png              Social-sharing image
 src/
   components/         Reusable navigation and content components

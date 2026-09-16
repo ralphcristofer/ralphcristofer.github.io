@@ -123,3 +123,4 @@
 - Confirmed that the page has one `h1`, no duplicate IDs, no missing internal anchor targets, and no browser console warnings or errors.
 - Corrected a narrow-screen horizontal-scroll edge case and repeated the production build after the fix.
 - Added private Sites hosting metadata for a shareable review deployment while retaining GitHub Pages as the documented repository deployment path.
+- Added a minimal static-asset Worker entry used only by the private Sites review deployment; the portfolio remains a static application with no backend data or secrets.
