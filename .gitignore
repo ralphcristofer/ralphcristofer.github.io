@@ -1,7 +1,32 @@
+# Dependencies
 node_modules/
+
+# Build output and caches
 dist/
 .vite/
+*.tsbuildinfo
+
+# Environment variables and local overrides (can contain secrets)
+.env
+.env.*
+!.env.example
 *.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Editor and operating-system files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
 .DS_Store
 Thumbs.db
-.dev-server.*.log
+
+# AI tool and review-hosting files (not part of the website)
+.agents/
+.openai/

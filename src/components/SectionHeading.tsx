@@ -1,14 +1,13 @@
 type SectionHeadingProps = {
-  eyebrow: string
+  id: string
   title: string
   introduction?: string
 }
 
-export function SectionHeading({ eyebrow, title, introduction }: SectionHeadingProps) {
+export function SectionHeading({ id, title, introduction }: SectionHeadingProps) {
   return (
     <div className="section-heading">
-      <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
+      <h2 id={id}>{title}</h2>
       {introduction ? <p>{introduction}</p> : null}
     </div>
   )

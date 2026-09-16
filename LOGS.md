@@ -141,3 +141,118 @@
 - Moved the `Current focus` note fully below the portrait so it no longer overlaps or clips the photograph.
 - Changed the footer to a non-overlaying sticky-footer layout that remains at the bottom of short pages without covering content.
 - Updated footer capitalization to `Software Development · Automation · Quality Engineering`.
+
+## 2026-09-16 - KISS redesign and consistency audit
+
+### Changed
+
+- Reduced the type system to four sizes (0.875rem, 1rem, 1.25rem, 2rem) plus the page title, and three weights (400, 600, 700). The rendered page went from 38 font size/weight combinations to 10.
+- Replaced ad-hoc colours, radii, and breakpoints with a small token set: two text colours, one accent, one radius, two breakpoints (40rem, 60rem).
+- Removed section eyebrows and taglines; every section now uses a plain heading ("About", "Experience", "Projects", "Skills", "Education", "Contact").
+- Simplified the hero to name, current role, one-sentence introduction, one button, and GitHub/LinkedIn links. The portrait is a plain circle without frame or "Current focus" note.
+- Replaced the dark six-card metrics band with four plain highlights under the hero.
+- Replaced the About career-path cards with a single "Path" line.
+- Experience is now flat (no timeline markers or cards). Each role shows one meta line (dates · location · type · arrangement), a summary, two highlights, and a "Show N more" disclosure. Parallel roles with identical details (Atwater) show the meta line once.
+- Earlier experience shows summaries only.
+- Project cards show status, description, technologies, and repository link; problem statement and engineering decisions moved into a disclosure. Additional work is a simple list.
+- Technologies and skills render as quiet "a · b · c" text lists instead of pill tags.
+- Contact is a simple four-item list; the resume notice is a single line. Footer reduced to copyright and back-to-top.
+- Page length: ~11 → ~8 screens on desktop (1440×900), ~22 → ~14 screens on mobile (390×844).
+
+### Consistency fixes
+
+- Unified the job title to "Senior Software Developer" across hero, page title, Open Graph, and X/Twitter metadata (JSON-LD already used it).
+- Removed the double-counted metric ("30 min → 10 min" and "~67%" describe the same improvement) and restored the "~" qualifiers used in the experience entry.
+- Removed the "Resume" nav button and "Resume status" hero button, which led to a "coming soon" notice.
+- Removed the footer tagline, which differed from the hero headline.
+- `Keywords Studios — Montréal` → `Keywords Studios` (location already shown in the meta line; spelling now matches "Montreal" elsewhere).
+- Skills naming aligned with the rest of the site: `Visual Basic (VB)` → `Visual Basic`, `HTML5`/`CSS3` → `HTML`/`CSS`, `Selenium WebDriver` → `Selenium`. Added `Next.js`, `Windows Forms`, and `Jira`, which were already listed in projects and experience. Moved `Node.js` and `ASP.NET` into "Frameworks & Web" and `Windows Task Scheduler` into "Infrastructure".
+- The phone `tel:` link and contact location are now derived from `profile` data instead of being hard-coded.
+- Removed unused data fields (`eyebrow`, `featured`, metric `context`, `profile.headline`).
+
+### Open questions (not changed — need confirmation)
+
+- "Computer Science Technology Student" (Aug 2014 – May 2017) does not match the Champlain College "Computer Science Technology" education dates (Oct 2019 – Jul 2020).
+- "Accounting and Computer Support & Networking Student" starts Aug 2017; the matching Lester B. Pearson DEP starts Sep 2017. The programme is also named three different ways across the site.
+- The employer is "Lester B. Pearson Continuing Education"; the school is "Lester B. Pearson School Board".
+- The MTL Local Store repository slug is `mtllocalestore` (extra "e") — confirm the URL resolves.
+- The root `assets/`, `js/`, and `styles/` folders are left over from the pre-React site and are not used by the build (including the outdated 2024 resume PDF).
+
+### Validation
+
+- TypeScript check and production build pass.
+- One `h1`, no duplicate IDs, no broken in-page anchors, no console errors, no horizontal scroll at 320px.
+
+## 2026-09-16 - Layout width, experience readability, and toggle buttons
+
+### Changed
+
+- Featured projects now appear in this order: PhotoHub, MTL Local Store, SKAP.
+- About now uses the full content width like every other section (its text was previously capped at 40rem). The two paragraphs sit side by side on larger screens.
+- Each employer in Experience is now a card. Every role uses two columns on desktop: dates, location, employment type, and work arrangement on the left; title, summary, highlights, and technologies on the right. On mobile these details show on one line above the title.
+- Replaced the small `<details>` triangle links with one consistent `ToggleButton` component (outlined button with a chevron, `aria-expanded` and `aria-controls`), used for:
+  - role highlights: "Show N more" / "Show less" (the extra bullets continue the same list)
+  - earlier experience: a labelled bar with "Show N roles" / "Hide roles"
+  - project cards: "Details" / "Hide details", next to the "Repository" link
+- Project cards align to the top so opening one card no longer stretches the others.
+- Every role now shows its own dates and details (the Atwater de-duplication was removed; the side column makes the repetition easy to scan).
+
+### Added
+
+- `src/components/ToggleButton.tsx`
+- `src/components/EarlierExperience.tsx`
+
+### Validation
+
+- TypeScript check and production build pass.
+- Toggle behaviour verified at 1440px and 390px: buttons expand and collapse, labels and `aria-expanded` update, every `aria-controls` target exists, no duplicate IDs, no console errors, no horizontal scroll.
+
+## 2026-09-16 - Modern visual redesign
+
+### Changed
+
+- New visual system: Inter variable font (self-hosted), slate neutrals with a single blue accent, one card radius, one control radius, one soft shadow. The type scale is unchanged (0.875 / 1 / 1.25 / 2rem plus the display name).
+- Automatic dark theme that follows the operating-system setting, including `theme-color` and `color-scheme` metadata.
+- Header: translucent sticky bar with an "RF" mark, active-section underline (IntersectionObserver), and a Contact button.
+- Hero: location pill, larger name, role line, primary "Get in touch" (email) and secondary "View experience" buttons, GitHub/LinkedIn icon buttons, framed round portrait, subtle grid-and-glow background, and four outcome cards.
+- About: large lead sentence beside the detail paragraphs; career path shown as an arrow sequence ending at the current focus.
+- Experience: vertical timeline (tablet and up) with a highlighted dot and "Current" badge for the present employer; timeline hidden on phones so cards use the full width. Role details wrap cleanly on phones without stray separators.
+- Projects: status badges (green = deployed, amber = active development), a divider above the Details / Code actions, and a light hover lift. "More on GitHub" is a row of link cards.
+- Skills: each group is a card with chips. Education cards lead with dates and the credential, with the institution in the accent colour.
+- Contact: dark closing band with the email as the main button, phone / LinkedIn / GitHub links, and the resume note. Footer matches the band.
+- Inline SVG icons (`Icon.tsx`) replace image icons so they follow the text colour in both themes.
+
+### Dependencies
+
+- Added `@fontsource-variable/inter` (run `npm install`).
+
+### Validation
+
+- TypeScript check and production build pass.
+- Light and dark screenshots at 1440px and 390px; no horizontal scroll, no console errors.
+- Text contrast meets WCAG AA in both themes (the only automated flags were false positives from the header's translucent background).
+- One `h1`, no duplicate IDs, no broken anchors or `aria-controls` targets; nav highlight, mobile menu, and all toggles verified.
+
+## 2026-09-16 - Repository hygiene
+
+### Changed
+
+- Expanded `.gitignore`: environment files (`.env`, `.env.*`, keeping `.env.example`), logs, TypeScript build info, test coverage, editor folders (`.vscode/*` except `extensions.json`, `.idea/`), swap files, and OS files.
+- Ignored `.agents/` and `.openai/`. `.openai/hosting.json` only identified a private review-hosting project and is not used by the website or the GitHub Pages deployment, so it is removed from version control (the local file is kept).
+
+## 2026-09-16 - Private repositories and content corrections
+
+### Removed
+
+- All project repository links (the repositories are private): the "Code" link on project cards, the links on the smaller project cards, and the `repository` field from project data and types.
+- The "Professional Development" entries (student periods) from earlier experience. Earlier experience now covers 2011 – 2018 with five roles.
+- The Champlain College "Computer Science Technology" education entry.
+
+### Changed
+
+- "More on GitHub" renamed to "Other projects"; those cards are now plain descriptions.
+- Projects introduction now reads "Personal projects." instead of "Personal public work."
+- Computer Support and Networks — DEP (Lester B. Pearson School Board) now includes programming and scripting, databases, and network management, with Python, Scripting, SQLite, and Network management added to its areas of study.
+- Education uses a three-column layout for the remaining three credentials.
+- README privacy note updated to reflect private repositories.
+- Resolves the earlier open questions about the "Professional Development" and Champlain College date conflicts.

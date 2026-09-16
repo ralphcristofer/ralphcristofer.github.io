@@ -9,18 +9,11 @@ export const education: Education[] = [
     technologies: ['Java', 'C#', 'Python', 'APIs', 'MERN', 'Oracle SQL'],
   },
   {
-    institution: 'Champlain College',
-    credential: 'Computer Science Technology',
-    dates: 'Oct 2019 – Jul 2020',
-    details: 'Programming, scripting, databases, and network-management concepts.',
-    technologies: ['Python', 'SQLite', 'Scripting', 'Network management'],
-  },
-  {
     institution: 'Lester B. Pearson School Board',
     credential: 'Computer Support and Networks — DEP',
     dates: 'Sep 2017 – Feb 2019',
-    details: 'Computer hardware, troubleshooting, server administration, networking, virtualization, and web fundamentals.',
-    technologies: ['Windows Server', 'Networking', 'Virtualization', 'HTML', 'CSS', 'Bootstrap', 'WordPress'],
+    details: 'Computer hardware, troubleshooting, programming and scripting, databases, server administration, networking and network management, virtualization, and web fundamentals.',
+    technologies: ['Python', 'Scripting', 'SQLite', 'Windows Server', 'Networking', 'Network management', 'Virtualization', 'HTML', 'CSS', 'Bootstrap', 'WordPress'],
   },
   {
     institution: 'Mapúa University',

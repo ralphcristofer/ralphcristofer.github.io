@@ -3,7 +3,6 @@ import type { ExperienceGroup } from '../types/portfolio'
 export const primaryExperience: ExperienceGroup[] = [
   {
     company: 'CIBC Mellon',
-    featured: true,
     roles: [
       {
         title: 'Senior Business Solutions Consultant (Senior Software Developer)',
@@ -29,7 +28,6 @@ export const primaryExperience: ExperienceGroup[] = [
   },
   {
     company: 'CI Financial',
-    featured: true,
     roles: [
       {
         title: 'Software Automation Developer',
@@ -77,7 +75,6 @@ export const primaryExperience: ExperienceGroup[] = [
   },
   {
     company: 'FDM Group',
-    featured: true,
     roles: [
       {
         title: 'Software Quality Assurance Lead',
@@ -140,7 +137,7 @@ export const primaryExperience: ExperienceGroup[] = [
           'Reviewed candidate portfolios, prior learning, experience, and supporting documentation for competency alignment.',
           'Conducted interviews and technical assessments and prepared records, learning materials, progress reports, and gap-focused support.',
         ],
-        technologies: ['Technical assessment', 'Instructional content', 'Microsoft Office', 'HTML5'],
+        technologies: ['Technical assessment', 'Instructional content', 'Microsoft Office', 'HTML'],
       },
     ],
   },
@@ -196,7 +193,7 @@ export const primaryExperience: ExperienceGroup[] = [
 
 export const earlierExperience: ExperienceGroup[] = [
   {
-    company: 'Keywords Studios — Montréal',
+    company: 'Keywords Studios',
     roles: [
       {
         title: 'Multi-Platform Game QA Tester',
@@ -209,25 +206,6 @@ export const earlierExperience: ExperienceGroup[] = [
           'Used tools including Wireshark, OBS Studio, Jira, and Confluence and supported teammates with platform-specific testing guidance.',
         ],
         technologies: ['Functional QA', 'Jira', 'Confluence', 'Wireshark', 'OBS Studio', 'LAN/WAN testing'],
-      },
-    ],
-  },
-  {
-    company: 'Professional Development',
-    roles: [
-      {
-        title: 'Accounting and Computer Support & Networking Student',
-        dates: 'Aug 2017 – Feb 2019',
-        location: 'Montreal, Quebec',
-        summary: 'Career-development period focused on formal accounting and computer support and networking studies.',
-        highlights: [],
-      },
-      {
-        title: 'Computer Science Technology Student',
-        dates: 'Aug 2014 – May 2017',
-        location: 'Montreal, Quebec',
-        summary: 'Career-development period focused on computer science technology studies.',
-        highlights: [],
       },
     ],
   },

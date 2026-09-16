@@ -7,7 +7,8 @@ A mobile-first digital resume and software engineering portfolio for Ralph Crist
 - React
 - TypeScript
 - Vite
-- Modern responsive CSS
+- Modern responsive CSS with automatic light and dark themes
+- Inter variable font, self-hosted through `@fontsource-variable/inter`
 - Static deployment with no required backend
 
 The site intentionally avoids a large UI framework and keeps career, education, skill, metric, and project content in typed data modules.
@@ -94,7 +95,7 @@ The refreshed PDF is not available yet. When complete, place it at:
 public/resume/ralph-fugaban-resume.pdf
 ```
 
-Then replace the pending resume status in `src/App.tsx` with a download link using `/resume/ralph-fugaban-resume.pdf`.
+Then replace the "updated resume PDF is coming soon" line in the Contact section of `src/App.tsx` with a download link to `/resume/ralph-fugaban-resume.pdf`.
 
 Do not use the older 2024 PDF as the current resume without reviewing and updating its content.
 
@@ -102,11 +103,11 @@ Do not use the older 2024 PDF as the current resume without reviewing and updati
 
 - Employer project details are intentionally generalized.
 - No proprietary source code, business names, internal URLs, credentials, or database structures are included.
-- Public project descriptions are based on repositories already visible on Ralph's GitHub profile.
+- Project repositories are private, so project cards describe the work without linking to source code.
 - Approximate metrics preserve qualifiers such as `~`, `approximately`, or ranges.
 
 ## Accessibility and responsive behavior
 
-The site includes semantic landmarks, a skip link, keyboard-accessible navigation, visible focus states, native disclosure controls, reduced-motion support, responsive layouts, and descriptive portrait alternative text.
+The site includes semantic landmarks, a skip link, keyboard-accessible navigation with an active-section indicator, visible focus states, labelled show/hide buttons (`aria-expanded` / `aria-controls`), light and dark colour schemes that follow the operating system, reduced-motion support, responsive layouts, and descriptive portrait alternative text.
 
 Target validation widths are 320px, 430px, 768px, 1024px, and 1440px.

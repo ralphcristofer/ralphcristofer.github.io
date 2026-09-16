@@ -1,7 +1,6 @@
 export type Metric = {
   value: string
   label: string
-  context: string
 }
 
 export type Role = {
@@ -17,21 +16,21 @@ export type Role = {
 
 export type ExperienceGroup = {
   company: string
-  featured?: boolean
   roles: Role[]
 }
 
 export type Project = {
   name: string
-  eyebrow: string
   problem: string
   solution: string
   decisions: string[]
   technologies: string[]
   status: string
-  repository: string
-  demo?: string
-  featured?: boolean
+}
+
+export type AdditionalProject = {
+  name: string
+  description: string
 }
 
 export type SkillGroup = {
